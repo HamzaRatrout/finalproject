@@ -3,6 +3,7 @@ import dataset, random, os
 
 app = Flask(__name__)
 db_url=os.environ['DATABASE_URL']
+db = dataset.connect(db_url)
 app.secret_key = urandom(24)
 
 
