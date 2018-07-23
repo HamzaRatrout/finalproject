@@ -7,6 +7,17 @@
 <img id="logo" src="{{ url_for('static', filename='images/we_code.png') }}"> 
 <h2 class="headers"> Login </h2>
 
+<h1 class="headers">Login</h1>
+<form action="/signin" method="POST">
+	<h1> login here </h1>
+	<b>UserName:</b> <br>
+	<input type="text" name="userName"><br>
+	<b>Password:</b><br>
+	<input type="password" name="password"><br>
+	<input type="submit" value="submit">
+</form>
+<p> New User? please register here </p>
+<a href="/register"> <button>Register</button></a>
 
 </body>
 </html>
