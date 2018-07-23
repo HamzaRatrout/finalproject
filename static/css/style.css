@@ -24,28 +24,29 @@ li a:hover {
   background-color: #111;
 }
 body{
-  background-color:#CAD178
+  background-color:#F1F7ED
   
 }
 #aboutUs{
-    font-size:23px;
+    font-size:20px;
     font-family:"Times New Roman";
     /*background-color: #D6E681;*/
     padding:20px;
     border-radius: 12px;
     width:52%;
     margin-bottom:20px;
-    margin-top:5px;
+    margin-right:35px
  
 }
 #aboutCd{
-    font-size:23px;
+    font-size:20px;
     font-family:"Times New Roman";
     /*background-color:#D6E681;*/
     padding:20px;
     border-radius: 12px;
     width:40%;
-    margin-top:5px;
+    margin-right:35px
+
 
 }
 .headers {
@@ -70,4 +71,7 @@ border:0;
   margin-bottom:40px;
   margin-right:25px;
   border-style: groove;
+}
+h1{
+  margin-right:30px;
 }
