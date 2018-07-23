@@ -18,7 +18,7 @@ def homepage():
 	return render_template('home.html')
 @app.route("/<page_name>/")
 def load_generic_page(page_name):
-	return render_template(page_name + "1.html",title=page_name)
+	return render_template(page_name + ".html",title=page_name)
 
 @app.route("/signin", methods=['POST', 'GET'])
 def login_page1():
