@@ -4,7 +4,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #0A5B07;
 }
 
 li {
@@ -15,11 +15,30 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 36px;
   text-decoration: none;
+
 }
 
 li a:hover {
   background-color: #111;
 }
+body{
+  /*background-color:#21910A*/
+}
+.home{
+    font-size:23px;
+  
+}
+.headers {
+text-align:center;
+font-size:40px;
 
+}
+#logo{
+ width:50%;
+ height:35%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
