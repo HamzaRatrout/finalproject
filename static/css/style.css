@@ -35,7 +35,8 @@ body{
     border-radius: 12px;
     width:52%;
     margin-bottom:20px;
-    margin-right:35px
+  margin-left:45px;
+    
  
 }
 #aboutCd{
@@ -45,7 +46,8 @@ body{
     padding:20px;
     border-radius: 12px;
     width:40%;
-    margin-right:35px
+  margin-left:45px;
+    
 
 
 }
@@ -68,10 +70,10 @@ border:0;
   height:40%;
   float:right;
   float:top;
-  margin-bottom:40px;
-  margin-right:25px;
+  margin-left:45px;
   border-style: groove;
+  margin-top:35px;
 }
-h1{
-  margin-right:30px;
+.h1{
+  margin-left:65px;
 }
