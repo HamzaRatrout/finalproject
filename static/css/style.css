@@ -28,6 +28,11 @@ body{
 }
 .home{
     font-size:23px;
+    font-family:"Times New Roman";
+    /*background-color: #0A5B07;*/
+    padding:20px;
+    /*border-radius: 12px;*/
+
   
 }
 .headers {
