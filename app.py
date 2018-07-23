@@ -16,6 +16,7 @@ def login_page():
 @app.route('/home')
 def homepage():
 	return render_template('home.html')
+<<<<<<< HEAD
 @app.route("/<page_name>/")
 def load_generic_page(page_name):
 	return render_template(page_name + ".html",title=page_name)
@@ -32,6 +33,16 @@ def login_page1():
 	else :
 		return render_template("login.html",error="The password or username is incorrect")
 		
+=======
+@app.route('/students')
+def page1():
+	return render_template('students.html')
+@app.route('/map')
+def page2():
+	return render_template('map.html')
+
+
+>>>>>>> 357a1c35a807dc472693b256f0f7057d633a491f
 # TODO: route to /register
 # TODO: route to /error
 

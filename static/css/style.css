@@ -77,6 +77,7 @@ border:0;
 .h1{
   margin-left:65px;
 }
+<<<<<<< HEAD
 .login {
   text-align:center;
   font-size:20;
@@ -89,3 +90,73 @@ background-color: green;
 
 
 }
+=======
+.buttons{
+      background-color:#469c46;
+    color: white;
+    padding: 15px 92px;
+    display: inline-block;
+    font-size: 42px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left:33%;
+    margin-top:1%;
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+}
+.buttons1{
+      background-color:#ed9b26;
+    color: white;
+    padding: 15px 92px;
+    display: inline-block;
+    font-size: 42px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left:33%;
+    margin-top:1%;
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+}
+.buttons2{
+      background-color:#cc3f3b;
+    color: white;
+    padding: 15px 92px;
+    display: inline-block;
+    font-size: 42px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left:33%;
+    margin-top:1%;
+    width:16%;
+      text-align: center;
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+
+}
+.buttons:hover {
+      background-color: white; 
+    color: black;
+        border: 2px solid #469c46;
+
+}
+.buttons1:hover {
+      background-color: white; 
+    color: black;
+        border: 2px solid #ed9b26;
+
+}
+.buttons2:hover {
+      background-color: white; 
+    color: black;
+        border: 2px solid #cc3f3b;
+
+}
+#map{
+  width:40%;
+  height:5%;
+}
+...
+>>>>>>> 357a1c35a807dc472693b256f0f7057d633a491f
