@@ -21,7 +21,7 @@ def load_generic_page(page_name):
 	return render_template(page_name + "1.html",title=page_name)
 
 @app.route("/signin", methods=['POST', 'GET'])
-def login_page():
+def login_page1():
 	accounts=db["accounts"]
 	username=request.form['userName']
 	password=request.form['password']
