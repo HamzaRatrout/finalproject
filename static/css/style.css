@@ -31,7 +31,7 @@ body{
     font-size:20px;
     font-family:"Times New Roman";
     /*background-color: #D6E681;*/
-    padding:20px;
+    padding:0px;
     border-radius: 12px;
     width:52%;
     margin-bottom:20px;
@@ -43,7 +43,7 @@ body{
     font-size:20px;
     font-family:"Times New Roman";
     /*background-color:#D6E681;*/
-    padding:20px;
+    padding:0px;
     border-radius: 12px;
     width:40%;
   margin-left:45px;
