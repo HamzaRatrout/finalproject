@@ -14,6 +14,9 @@ def login_page():
 @app.route('/home')
 def homepage():
 	return render_template('home.html')
+@app.route('/students')
+def page1():
+	return render_template('students.html')
 
 # TODO: route to /register
 
