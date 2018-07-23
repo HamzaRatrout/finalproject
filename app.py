@@ -4,7 +4,7 @@ import dataset, random, os
 app = Flask(__name__)
 app.secret_key = urandom(24)
 
-# TODO: set up database
+TODO: set up database
 # db = dataset.connect(“<database>”)
 
 
