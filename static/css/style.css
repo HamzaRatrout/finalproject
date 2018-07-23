@@ -140,4 +140,8 @@ border:0;
         border: 2px solid #cc3f3b;
 
 }
+#map{
+  width:40%;
+  height:5%;
+}
 ...

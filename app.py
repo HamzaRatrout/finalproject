@@ -17,6 +17,10 @@ def homepage():
 @app.route('/students')
 def page1():
 	return render_template('students.html')
+@app.route('/map')
+def page2():
+	return render_template('map.html')
+
 
 # TODO: route to /register
 
