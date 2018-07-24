@@ -75,7 +75,7 @@ def register():
 def delete_table():
 	table= db['accounts']
 	table.delete()
-	# return render_template('home.html')
+	return render_template('data.html')
 if __name__ == "__main__":
     app.run(port=3000)
 
