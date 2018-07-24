@@ -52,11 +52,11 @@ def login_page1():
     user = accounts.find_one(userName=username,password=password)
     if username=="MohammadBarbarawi" and password=="123456789987654321":
     	show_data = True 
-    	
+
     if user:
         session['loggedIn']=True
         return redirect("/home")
-    else :
+    else:
         return render_template("login.html",error="The password or username is incorrect")
 
 @app.route("/register1")
