@@ -51,8 +51,8 @@ def login_page1():
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
     if username=="MohammadBarbarawi" and password=="123456789987654321":
-    	return show_data=True 
-
+    	show_data = True 
+    	
     if user:
         session['loggedIn']=True
         return redirect("/home")
