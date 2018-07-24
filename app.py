@@ -23,17 +23,17 @@ def load_home_page ():
 		return render_template("home.html",title="Home")
 	else :
 		return render_template('loginPage.html',error="you must be logged in to see the webpage")
-@app.route("/<page_name>/")
-def load_generic_page(page_name):
-	return render_template(page_name + ".html",title=page_name)
+# @app.route("/<page_name>/")
+# def load_generic_page(page_name):
+# 	return render_template(page_name + ".html",title=page_name)
 
 
-# @app.route('/students')
-# def page1():
-# 	return render_template('students.html')
-# @app.route('/map')
-# def page2():
-# 	return render_template('map.html')
+@app.route('/students')
+def page1():
+	return render_template('students.html')
+@app.route('/map')
+def page2():
+	return render_template('map.html')
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
@@ -50,7 +50,7 @@ def login_page1():
 def register1():
 	render_template('register1.html')
 # TODO: route to /register
-@app.route("/register",methods=['POST', 'GET'])
+@app.route("/newAccount",methods=['POST', 'GET'])
 def register():
 	accounts=db["accounts"]
 	potential_username=request.form['userName']
