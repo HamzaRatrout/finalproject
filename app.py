@@ -46,10 +46,19 @@ def login_page1():
     else :
         return render_template("login.html",error="The password or username is incorrect")
 
-    table= db['profiles']
-	table.insert(dict(firstName=firstName ,lastName=lastName,password=password))
-	return render_template('data.html', messages= list (table.all()))
+    
 # TODO: route to /register
+@app.route("/register",methods=['POST', 'GET'])
+def register():
+	accounts=db["accounts"]
+	potential_username=request.form['userName']
+	potential_password=request.form['password']
+	username_exists=accounts.find_one(userName=potential_username)
+	if username_exists:
+		return render_template("register.html", error="username is already taken")
+	else :
+		accounts.insert(dict(userName=potential_username,password=potential_password))
+		return render_template("login.html")
 # TODO: route to /error
 
 if __name__ == "__main__":
