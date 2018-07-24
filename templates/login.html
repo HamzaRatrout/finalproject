@@ -6,7 +6,9 @@
 <body>
 <img id="logo" src="{{ url_for('static', filename='images/we_code.png') }}"> 
 <h2 class="headers"> Login </h2>
-
+{% if error %}
+<p> {{error}}</p>
+{% endif %}	
 <form class="login" action="/login" method="POST">
 	<b >Username:</b> <br>
 	<input type="text" name="userName"><br>
