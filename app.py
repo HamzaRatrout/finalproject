@@ -34,9 +34,9 @@ def login_page1():
 		return render_template("login.html",error="The password or username is incorrect")
 		
 
-@app.route('/students')
-def page1():
-	return render_template('students.html')
+# @app.route('/students')
+# def page1():
+# 	return render_template('students.html')
 @app.route('/map')
 def page2():
 	return render_template('map.html')
