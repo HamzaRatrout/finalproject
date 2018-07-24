@@ -3,6 +3,7 @@ import dataset, random, os
 
 app = Flask(__name__)
 db_url=os.environ['DATABASE_URL']
+# db_url="postgres://wpkfjzkaxiispe:cd075d5678edfd916b08a0e2d0bf7a264e94ef30eac671eb91ff1399383b0c2b@ec2-54-204-23-228.compute-1.amazonaws.com:5432/d30vhtaaeu1lnr"
 db = dataset.connect(db_url)
 app.secret_key = os.urandom(24)
 
@@ -29,6 +30,7 @@ def load_home_page ():
 
 
 @app.route("/students")
+@app.route("/students/")
 def page_students():
 	return render_template('students.html')
 
