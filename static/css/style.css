@@ -91,7 +91,7 @@ background-color: green;
 }
 
 .buttons{
-      background-color:#469c46;
+    background-color:#469c46;
     color: white;
     padding: 15px 92px;
     display: inline-block;
@@ -105,7 +105,7 @@ background-color: green;
     transition-duration: 0.7s;
 }
 .buttons1{
-      background-color:#ed9b26;
+    background-color:#ed9b26;
     color: white;
     padding: 15px 92px;
     display: inline-block;
