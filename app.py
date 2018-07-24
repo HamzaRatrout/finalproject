@@ -20,6 +20,9 @@ def page1():
 @app.route('/map')
 def page2():
 	return render_template('map.html')
+@app.route('/y2b')
+def page3():
+	return render_template('y2b.html')
 @app.route("/signin", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
