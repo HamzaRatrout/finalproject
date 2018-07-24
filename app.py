@@ -38,7 +38,7 @@ def page_students():
 @app.route("/map/")
 def page2():
 	return render_template('map.html')
-<<<<<<< HEAD
+
 
 
 @app.route("/data")
@@ -48,12 +48,11 @@ def data():
 	else:
 		return render_template('home.html')
 @app.route("/login", methods=['POST', 'GET'])
-=======
+
 @app.route('/y2b')
 def page3():
 	return render_template('y2b.html')
 @app.route("/signin", methods=['POST', 'GET'])
->>>>>>> de81e5223f367b47873d68ba7d93d71d1a429791
 def login_page1():
     accounts=db["accounts"]
     username=request.form['userName']
