@@ -20,6 +20,17 @@ def page1():
 @app.route('/map')
 def page2():
 	return render_template('map.html')
+@app.route("/signin", methods=['POST', 'GET'])
+def login_page1():
+    accounts=db["accounts"]
+    username=request.form['userName']
+    password=request.form['password']
+    user = accounts.find_one(userName=username,password=password)
+    if user:
+        session['loggedIn']=True
+        return render_template("home.html")
+    else :
+        return render_template("login.html",error="The password or username is incorrect")
 
 
 # TODO: route to /register
