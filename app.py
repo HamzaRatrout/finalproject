@@ -48,7 +48,7 @@ def login_page1():
 
 @app.route("/register1")
 def register1():
-	render_template('register1.html')
+	return render_template('register1.html')
 # TODO: route to /register
 @app.route("/newAccount",methods=['POST', 'GET'])
 def register():
