@@ -46,7 +46,9 @@ def login_page1():
     else :
         return render_template("login.html",error="The password or username is incorrect")
 
-    
+@app.route("/register1")
+def register1():
+	render_template('register.html')
 # TODO: route to /register
 @app.route("/register",methods=['POST', 'GET'])
 def register():
