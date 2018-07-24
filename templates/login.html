@@ -7,15 +7,15 @@
 <img id="logo" src="{{ url_for('static', filename='images/we_code.png') }}"> 
 <h2 class="headers"> Login </h2>
 
-<form class="login" action="/signin" method="POST">
+<form class="login" action="/login" method="POST">
 	<b >UserName:</b> <br>
 	<input type="text" name="userName"><br>
 	<b >Password:</b><br>
 	<input type="password" name="password"><br>
 	<input class="submit"type="submit" value="submit">
 </form>
-<!-- <p class="login"> New User? please register here </p>
- --><!-- <a href="/register"> <button class="login">Register</button></a>
- -->
+ <p class="login"> New User? please register here </p>
+<a href="/register"> <button class="login">Register</button></a>
+
 </body>
 </html>
