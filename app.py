@@ -22,7 +22,7 @@ def load_home_page ():
 
 		return render_template("home.html",title="Home")
 	else :
-		return render_template('loginPage.html',error="you must be logged in to see the webpage")
+		return render_template('login.html',error="you must be logged in to see the webpage")
 # @app.route("/<page_name>/")
 # def load_generic_page(page_name):
 # 	return render_template(page_name + ".html",title=page_name)
@@ -31,6 +31,7 @@ def load_home_page ():
 @app.route('/students')
 def page_students():
 	return render_template('students.html')
+
 @app.route('/map')
 def page2():
 	return render_template('map.html')
