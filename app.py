@@ -42,7 +42,7 @@ def page2():
 
 @app.route("/data")
 def data():
-	return render_template('data.html')
+	return render_template('data.html', accounts=db["accounts"])
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
