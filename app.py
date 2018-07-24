@@ -39,6 +39,10 @@ def page_students():
 def page2():
 	return render_template('map.html')
 
+
+@app.route("/data")
+def data():
+	return render_template('data.html')
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
