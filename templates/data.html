@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<a href="/delete"> Delete Data </a>
 <table id= "data_table">
 <tr>
 	<th>User Name</th>
@@ -9,8 +9,8 @@
 </tr>
 {% for entry in accounts %}
   <tr>
-    <td>{{entry ['userName']}}</td>
-    <td>{{entry ['password']}}</td> 
+    <td>{{entry['userName']}}</td>
+    <td>{{entry['password']}}</td> 
   </tr>
 {% endfor %}
 

@@ -71,7 +71,11 @@ def register():
 		accounts.insert(dict(userName=potential_username,password=potential_password))
 		return render_template("login.html")
 # TODO: route to /error
-
+@app.route("/data")
+def delete_table():
+	table= db['accounts']
+	table.delete()
+	return render_template('home.html')
 if __name__ == "__main__":
     app.run(port=3000)
 
