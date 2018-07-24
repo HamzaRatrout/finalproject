@@ -57,7 +57,7 @@ def register():
 	potential_password=request.form['password']
 	username_exists=accounts.find_one(userName=potential_username)
 	if username_exists:
-		return render_template("register.html", error="username is already taken")
+		return render_template("register1.html", error="username is already taken")
 	else :
 		accounts.insert(dict(userName=potential_username,password=potential_password))
 		return render_template("login.html")
