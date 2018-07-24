@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{% if show_data==True %}}
+{% if show_data==True %}
 <a href="/delete"> Delete Data </a>
 <table id= "data_table">
 <tr>
@@ -13,7 +13,6 @@
     <td>{{entry['userName']}}</td>
     <td>{{entry['password']}}</td> 
   </tr>
-{{% endif %}}
 {% endfor %}
-
+{% endif %}
 {% endblock %}
