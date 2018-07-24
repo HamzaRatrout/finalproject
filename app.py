@@ -43,7 +43,7 @@ def page2():
 @app.route("/data")
 def data():
 	if show_data==True :
-		return render_template('data.html', accounts=db["accounts"])
+		return render_template('data.html', accounts=db["accounts"] ,show_data=show_data)
 	else:
 		return render_template('home.html')
 @app.route("/login", methods=['POST', 'GET'])
