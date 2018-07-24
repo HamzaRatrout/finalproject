@@ -28,13 +28,14 @@ def load_home_page ():
 # 	return render_template(page_name + ".html",title=page_name)
 
 
-@app.route('/students')
+@app.route("/students")
 def page_students():
 	return render_template('students.html')
 
-@app.route('/map')
+@app.route("/map")
 def page2():
 	return render_template('map.html')
+
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
