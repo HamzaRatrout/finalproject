@@ -42,7 +42,7 @@ def login_page1():
     user = accounts.find_one(userName=username,password=password)
     if user:
         session['loggedIn']=True
-        return redirect("home.html")
+        return redirect("/home")
     else :
         return render_template("login.html",error="The password or username is incorrect")
 
