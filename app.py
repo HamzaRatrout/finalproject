@@ -17,7 +17,7 @@ def login_page():
 def homepage():
 	return render_template('home.html')
 
-@app.route("/<page_name>/")
+@app.route("/<page_name>")
 def load_generic_page(page_name):
 	return render_template(page_name + ".html",title=page_name)
 
