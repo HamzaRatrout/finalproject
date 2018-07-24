@@ -53,9 +53,9 @@ def login_page1():
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
     global show_data
-    if username=="MohammadBarbarawi":
+    if username=="1":
     	show_data = True
-    else :
+    else:
     	show_data =False 
     if user:
         session['loggedIn']=True
