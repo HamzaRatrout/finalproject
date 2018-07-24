@@ -8,7 +8,7 @@ db = dataset.connect(db_url)
 app.secret_key = os.urandom(24)
 
 
-show_data=False
+global show_data=False
 
 
 @app.route('/')
@@ -52,10 +52,10 @@ def login_page1():
     username=request.form['userName']
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
-    if username=="MohammadBarbarawi" and password=="123456789987654321":
+    if username=="MohammadBarbarawi":
     	show_data = True
     else :
-    	show_data =False 
+    	show_data = False 
     if user:
         session['loggedIn']=True
         return redirect("/home")
