@@ -44,6 +44,8 @@ def page2():
 def data():
 	if show_data==True :
 		return render_template('data.html', accounts=db["accounts"])
+	else:
+		return render_template('home.html')
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
