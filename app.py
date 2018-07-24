@@ -8,7 +8,7 @@ db = dataset.connect(db_url)
 app.secret_key = os.urandom(24)
 
 
-
+show_data=False
 
 
 @app.route('/')
@@ -42,13 +42,17 @@ def page2():
 
 @app.route("/data")
 def data():
-	return render_template('data.html', accounts=db["accounts"])
+	if show_data==True :
+		return render_template('data.html', accounts=db["accounts"])
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
     username=request.form['userName']
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
+    if username=="MohammadBarbarawi" and password=="123456789987654321":
+    	return show_data=True 
+
     if user:
         session['loggedIn']=True
         return redirect("/home")
@@ -73,9 +77,10 @@ def register():
 # TODO: route to /error
 @app.route("/delete")
 def delete_table():
-	table= db['accounts']
-	table.delete()
-	return render_template('data.html')
+	if show_data== True :
+		table= db['accounts']
+		table.delete()
+		return render_template('data.html')
 if __name__ == "__main__":
     app.run(port=3000)
 
