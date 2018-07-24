@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+	<div class="card">
+		<div class="front"><img class = "cimg" src="{{ url_for('static', filename='images/teama.jpg') }}"></div>
+		<div class="back"><h1 class ="head" style = "margin-top=3%">Teama Amer
+			<p class= "other">
+				singing <br>
+				.......
+
+
+
+
+			</p>
+			<a class="contact" href = "https://www.facebook.com/profile.php?id=100010450238237">contact</a>
+
+		</h1></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+
+
+      $(function(){
+        
+        $(".card").flip({
+          trigger: 'hover'
+        });
+      });
+    
+</script>
+
+{% endblock %}
