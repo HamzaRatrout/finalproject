@@ -29,7 +29,7 @@ def load_home_page ():
 
 
 @app.route('/students')
-def page1():
+def page_students():
 	return render_template('students.html')
 @app.route('/map')
 def page2():
