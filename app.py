@@ -35,6 +35,7 @@ def page_students():
 	return render_template('students.html')
 
 @app.route("/map")
+@app.route("/map/")
 def page2():
 	return render_template('map.html')
 
