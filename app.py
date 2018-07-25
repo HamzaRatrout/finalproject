@@ -97,7 +97,7 @@ def delete_table():
 		table.delete()
 		return render_template('data.html')
 
-@app.route("/suggestion")
+@app.route("/suggestions")
 def suggestion ():
 	return render_template('suggestion.html')
 if __name__ == "__main__":
