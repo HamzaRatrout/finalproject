@@ -44,7 +44,7 @@ def template_test():
 	message = request.form['message']
 	table= db['message']
 	table.insert(dict(yourname=yourname ,message=message ))
-	return render_template('message.html', messages= list (table.all()))
+	return render_template('message.html', messages= list (table.all()),show_data=show_data)
 
 @app.route("/data")
 def data():
