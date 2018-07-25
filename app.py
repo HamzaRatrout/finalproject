@@ -99,7 +99,7 @@ def delete_table():
 
 @app.route("/suggestions")
 def suggestion ():
-	return render_template('suggestion.html',title=Suggestion)
+	return render_template('suggestion.html',title="Suggestion")
 if __name__ == "__main__":
     app.run(port=3000)
 
