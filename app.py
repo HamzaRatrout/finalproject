@@ -13,10 +13,10 @@ show_data=False
 
 @app.route('/')
 def login_page():
-    return render_template('login.html')
+    return render_template('login.html',title="Login")
 @app.route('/home')
 def homepage():
-	return render_template('home.html')
+	return render_template('home.html',title="Home")
 @app.route ("/home")
 def load_home_page ():
 	if 'loggedIn' in session and  session['loggedIn']==True:
@@ -31,12 +31,12 @@ def load_home_page ():
 @app.route("/students")
 @app.route("/students/")
 def page_students():
-	return render_template('students.html')
+	return render_template('students.html',title="Students")
 
 @app.route("/map")
 @app.route("/map/")
 def page2():
-	return render_template('map.html')
+	return render_template('map.html',title="Map")
 
 @app.route("/formExample", methods=['POST', 'GET'])
 def template_test():
@@ -44,19 +44,19 @@ def template_test():
 	message = request.form['message']
 	table= db['message']
 	table.insert(dict(yourname=yourname ,message=message ))
-	return render_template('message.html', messages= list (table.all()),show_data=show_data)
+	return render_template('message.html', messages= list (table.all()),show_data=show_data,title="Thanks")
 
 @app.route("/data")
 def data():
 	if show_data==True :
-		return render_template('data.html', accounts=db["accounts"] ,show_data=show_data)
+		return render_template('data.html', accounts=db["accounts"] ,show_data=show_data,title="Data")
 	else:
 		return render_template('home.html')
 # @app.route("/login", methods=['POST', 'GET'])
 
 @app.route('/y2b')
 def page3():
-	return render_template('y2b.html')
+	return render_template('y2b.html',title="Y2B")
 @app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
@@ -76,7 +76,7 @@ def login_page1():
 
 @app.route("/register1")
 def register1():
-	return render_template('register1.html')
+	return render_template('register1.html',title=Register)
 # TODO: route to /register
 @app.route("/newAccount",methods=['POST', 'GET'])
 def register():
@@ -99,7 +99,7 @@ def delete_table():
 
 @app.route("/suggestions")
 def suggestion ():
-	return render_template('suggestion.html')
+	return render_template('suggestion.html',title=Suggestion)
 if __name__ == "__main__":
     app.run(port=3000)
 
