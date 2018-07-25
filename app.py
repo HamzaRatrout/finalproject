@@ -103,7 +103,7 @@ def suggestion ():
 
 
 
-@app.routet("/contact"):
+@app.routet("/contact")
 def contact ():
 	return render_template('contact.html',title="contact")
 if __name__ == "__main__":
