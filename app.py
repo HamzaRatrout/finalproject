@@ -122,7 +122,7 @@ def wtvr():
 def wtv2r():
    return render_template('sorry.html')
 
-app.add_url_rule('/favicon.ico',redirect_to=url_for('static', filename='favicon.ico'))
+app.add_url_rule('/favicon.ico',redirect_to=url_for('static', filename='icon.png'))
 
 
 @app.route('/favicon.ico')
