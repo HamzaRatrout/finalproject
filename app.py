@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import dataset, random, os
-
+from flask import send_from_directory
 app = Flask(__name__)
 db_url=os.environ['DATABASE_URL']
 # db_url="postgres://wpkfjzkaxiispe:cd075d5678edfd916b08a0e2d0bf7a264e94ef30eac671eb91ff1399383b0c2b@ec2-54-204-23-228.compute-1.amazonaws.com:5432/d30vhtaaeu1lnr"
@@ -121,6 +121,13 @@ def wtvr():
 @app.route('/wait')
 def wtv2r():
    return render_template('sorry.html')
+
+app.add_url_rule('/favicon.ico',redirect_to=url_for('static', filename='favicon.ico'))
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/icon.png')
 
 if __name__ == "__main__":
     app.run(port=3000)
