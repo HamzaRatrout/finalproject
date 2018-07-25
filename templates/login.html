@@ -5,7 +5,7 @@
 </head>
 <body>
 <img id="logo" src="{{ url_for('static', filename='images/we_code.png') }}"> 
-<h2 class="headers"> Login </h2>
+<h2 class="headers"> Login:- </h2>
 {% if error %}
 <p> {{error}}</p>
 {% endif %}	
@@ -17,7 +17,7 @@
 	<input class="submit"type="submit" value="submit">
 
 </form>
- <p class="login"> New user? Please register here </p>
+ <p class="login"> New user? Please</p><a href="/register1">register here</a>
 <a href="/register1"> <button class="login">Register</button></a>
 
 </body>
