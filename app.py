@@ -117,7 +117,7 @@ def delete_table1():
 
 @app.route('/ins')
 def wtvr():
-   return render_template('instructors.html')
+   return render_template('instructors.html',title="Instructors")
 @app.route('/wait')
 def wtv2r():
    return render_template('sorry.html')
