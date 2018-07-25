@@ -108,6 +108,14 @@ def contact ():
 	return render_template('contact.html',title="contact")
 
 
+@app.route("/delete1")
+def delete_table1():
+	if show_data== True :
+		table= db['message']
+		table.delete()
+		return render_template('message.html')
+
+
 
 if __name__ == "__main__":
     app.run(port=3000)
