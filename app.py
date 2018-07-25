@@ -16,6 +16,7 @@ def login_page():
     return render_template('login.html',title="Login")
 @app.route('/home')
 def homepage():
+<<<<<<< HEAD
 	return render_template('home.html',title="Home")
 @app.route ("/home")
 def load_home_page ():
@@ -58,6 +59,19 @@ def data():
 def page3():
 	return render_template('y2b.html',title="Y2B")
 @app.route("/login", methods=['POST', 'GET'])
+=======
+    return render_template('home.html')
+@app.route('/students')
+def page1():
+    return render_template('students.html')
+@app.route('/map')
+def page2():
+    return render_template('map.html')
+@app.route('/y2b')
+def page3():
+    return render_template('y2b.html')
+@app.route("/signin", methods=['POST', 'GET'])
+>>>>>>> c6b8f25009995ae3a8cd9056e81de3d647bc7285
 def login_page1():
     accounts=db["accounts"]
     username=request.form['userName']
@@ -74,9 +88,19 @@ def login_page1():
     else:
         return render_template("login.html",error="The password or username is incorrect")
 
+<<<<<<< HEAD
 @app.route("/register1")
 def register1():
 	return render_template('register1.html')
+=======
+@app.route('/ins')
+def wtvr():
+    return render_template('instructors.html')
+@app.route('/wait')
+def wtv2r():
+    return render_template('sorry.html')
+
+>>>>>>> c6b8f25009995ae3a8cd9056e81de3d647bc7285
 # TODO: route to /register
 @app.route("/newAccount",methods=['POST', 'GET'])
 def register():
