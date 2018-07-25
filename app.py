@@ -14,9 +14,9 @@ show_data=False
 @app.route('/')
 def login_page():
     return render_template('login.html')
-# @app.route('/home')
-# def homepage():
-# 	return render_template('home.html')
+@app.route('/home')
+def homepage():
+	return render_template('home.html')
 @app.route ("/home")
 def load_home_page ():
 	if 'loggedIn' in session and  session['loggedIn']==True:
@@ -51,7 +51,7 @@ def data():
 @app.route('/y2b')
 def page3():
 	return render_template('y2b.html')
-@app.route("/signin", methods=['POST', 'GET'])
+@app.route("/login", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
     username=request.form['userName']
