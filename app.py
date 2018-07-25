@@ -38,7 +38,13 @@ def page_students():
 def page2():
 	return render_template('map.html')
 
-
+@app.route("/formExample", methods=['POST', 'GET'])
+def template_test():
+	yourname = request.form['yourname']
+	message = request.form['message']
+	table= db['message']
+	table.insert(dict(yourname=yourname ,message=message ))
+	return render_template('message.html', messages= list (table.all()))
 
 @app.route("/data")
 def data():
