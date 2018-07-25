@@ -19,7 +19,7 @@ def login_page():
 # 	return render_template('home.html')
 @app.route ("/home")
 def load_home_page ():
-	if 'loggedIn' in session and  session['loggedIn']==False:
+	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template("home.html",title="Home")
 	else :
 		return render_template('login.html',error="you must be logged in to see the webpage")
