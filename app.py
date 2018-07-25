@@ -19,8 +19,7 @@ def login_page():
 # 	return render_template('home.html')
 @app.route ("/home")
 def load_home_page ():
-	if 'loggedIn' in session and  session['loggedIn']==True :
-
+	if 'loggedIn' in session and  session['loggedIn']==False:
 		return render_template("home.html",title="Home")
 	else :
 		return render_template('login.html',error="you must be logged in to see the webpage")
@@ -47,7 +46,7 @@ def data():
 		return render_template('data.html', accounts=db["accounts"] ,show_data=show_data)
 	else:
 		return render_template('home.html')
-@app.route("/login", methods=['POST', 'GET'])
+# @app.route("/login", methods=['POST', 'GET'])
 
 @app.route('/y2b')
 def page3():
