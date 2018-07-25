@@ -13,16 +13,16 @@ def login_page():
     return render_template('login.html')
 @app.route('/home')
 def homepage():
-	return render_template('home.html')
+    return render_template('home.html')
 @app.route('/students')
 def page1():
-	return render_template('students.html')
+    return render_template('students.html')
 @app.route('/map')
 def page2():
-	return render_template('map.html')
+    return render_template('map.html')
 @app.route('/y2b')
 def page3():
-	return render_template('y2b.html')
+    return render_template('y2b.html')
 @app.route("/signin", methods=['POST', 'GET'])
 def login_page1():
     accounts=db["accounts"]
@@ -35,6 +35,12 @@ def login_page1():
     else :
         return render_template("login.html",error="The password or username is incorrect")
 
+@app.route('/ins')
+def wtvr():
+    return render_template('instructors.html')
+@app.route('/wait')
+def wtv2r():
+    return render_template('sorry.html')
 
 # TODO: route to /register
 

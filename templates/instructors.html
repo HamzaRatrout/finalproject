@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<div class="card">
+		<div class="front"><img class = "cimg" src="{{ url_for('static', filename='images/katy.jpg') }}"></div>
+		<div class="back"><h1 class ="head" style = "margin-top=3%">Katy Shi
+			<pre class= "other">
+.......
+Y2b CS
+.......
+ exercise
+.......</pre>
+			<a class="buton" href = "https://www.facebook.com/katy.shi">contact</a>
+
+		</h1></div>
+	</div>
+	
+</div>
+<div class="container">
+	<div class="card">
+		<div class="front"><img class = "cimg" src="{{ url_for('static', filename='images/remi1.jpg') }}"></div>
+		<div class="back"><h1 class ="head" style = "margin-top=3%">Remi Oso
+			<pre class= "other">
+.......
+Y2b CS
+.......
+ Basketball
+.......</pre>
+			<a class="buton" href = "https://www.facebook.com/remioso">contact</a>
+
+		</h1></div>
+	</div>
+	
+</div>
+<div class="container">
+	<div class="card">
+		<div class="front"><img class = "cimg" src="{{ url_for('static', filename='images/lily.jpg') }}"></div>
+		<div class="back"><h1 class ="head" style = "margin-top=3%">Lilliana Smith
+			<pre class= "other">
+.......
+Y2b DT
+.......
+ Gymnastics
+.......</pre>
+			<a class="buton" href = "https://www.facebook.com/lilliana.loren">contact</a>
+
+		</h1></div>
+	</div>
+	
+</div>
+<div class="container">
+	<div class="card">
+		<div class="front"><img class = "cimg" src="{{ url_for('static', filename='images/sho.jpg') }}"></div>
+		<div class="back"><h1 class ="head" style = "margin-top=3%">Shoroq Marshoud
+			<pre class= "other">
+.......
+Y2b DT
+.......
+ Gymnastics
+.......</pre>
+			<a class="buton" href = "https://www.facebook.com/profile.php?id=100004222998573">contact</a>
+
+		</h1></div>
+	</div>
+	
+</div>
+
+
+<script type="text/javascript">
+
+
+
+      $(function(){
+        
+        $(".card").flip({
+          trigger: 'hover'
+        });
+      });
+    
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}
