@@ -100,6 +100,12 @@ def delete_table():
 @app.route("/suggestions")
 def suggestion ():
 	return render_template('suggestion.html',title="Suggestion")
+
+
+
+@app.routet("/contact"):
+def contact ():
+	return render_template('contact.html',title="contact")
 if __name__ == "__main__":
     app.run(port=3000)
 
