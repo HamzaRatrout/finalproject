@@ -87,7 +87,7 @@ def login_page1():
     	show_data =False 
     if user:
         session['loggedIn']=True
-        return redirect("/home")
+        return render_template("home.html")
     else:
         return render_template("login.html",error="The password or username is incorrect")
 
@@ -143,6 +143,7 @@ def delete_table1():
 
 @app.route('/ins')
 def instructors():
+	print 'loggedIn' in session and  session['loggedIn']==True
 	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template('instructors.html',title="Instructors")   
 	else :
