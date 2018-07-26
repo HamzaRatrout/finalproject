@@ -15,7 +15,7 @@ show_data=False
 def login_page():
 	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template('home.html',title="Login")
-    else :
+	else:
 		return render_template('login.html',title="Login")
 @app.route ("/home")
 def load_home_page ():
