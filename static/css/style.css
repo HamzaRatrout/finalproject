@@ -300,12 +300,12 @@ max-height:100 ;
 }
 .logout1 {
 background-color: #98CB5A;
-font-size:30px;
+font-size:21px;
 border-radius:12px;
-margin-top:2%;
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+margin-top:5%;
+/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
 
 
 
-  
+
 }
