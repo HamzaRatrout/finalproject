@@ -81,7 +81,7 @@ def login_page1():
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
     global show_data
-    if username=="MohammadBarbarawi"or"Hamza":
+    if username=="MohammadBarbarawi":
     	show_data = True
     else:
     	show_data =False 
