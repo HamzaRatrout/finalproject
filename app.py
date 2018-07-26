@@ -28,7 +28,7 @@ def load_home_page ():
 # 	return render_template(page_name + ".html",title=page_name)
 
 
-@app.route("/students")
+# @app.route("/students")
 @app.route("/students/")
 def page_students():
 	if 'loggedIn' in session:
@@ -37,7 +37,7 @@ def page_students():
 		return render_template('login.html',error="You must be logged in to see the webpage")
 	
 
-@app.route("/map")
+# @app.route("/map")
 @app.route("/map/")
 def page2():
 	if 'loggedIn' in session:
@@ -141,14 +141,14 @@ def delete_table1():
 		return render_template('login.html',error="You must be logged in to see the webpage")
 	
 
-@app.route('/ins')
+@app.route('/ins/')
 def instructors():
 	# print 'loggedIn' in session
 	if 'loggedIn' in session:
 		return render_template('instructors.html',title="Instructors")   
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
-@app.route('/wait')
+@app.route('/wait/')
 def wtv2r():
 	if 'loggedIn' in session:
 		return render_template('sorry.html')
