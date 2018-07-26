@@ -125,10 +125,8 @@ def wtv2r():
 
 @app.route("/logout")
 def logout ():
-	if 'loggedIn' in session and  session['loggedIn']==False:
-		return render_template("login.html",title="Logout")
-	else :
-		return render_template('login.html')
+	session['loggedIn']=False:
+	return render_template("login.html",title="Logout")
 if __name__ == "__main__":
     app.run(port=3000)
 
