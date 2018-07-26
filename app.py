@@ -17,7 +17,7 @@ def login_page():
 		return render_template('home.html',title="Login")
 	else:
 		return render_template('login.html',title="Login")
-@app.route ("/home")
+@app.route ("/home/")
 def load_home_page ():
 	if 'loggedIn' in session :
 		return render_template("home.html",title="Home")
@@ -57,7 +57,7 @@ def template_test():
 		return render_template('login.html',error="You must be logged in to see the webpage")
 	
 
-@app.route("/data")
+@app.route("/data/")
 def data():
 	if 'loggedIn' in session:
 		if show_data==True :
@@ -68,7 +68,7 @@ def data():
 		return render_template('login.html',error="You must be logged in to see the webpage")
 # @app.route("/login", methods=['POST', 'GET'])
 
-@app.route('/y2b')
+@app.route('/y2b/')
 def page3():
 	if 'loggedIn' in session:
 		return render_template('y2b.html',title="Y2B")
@@ -117,7 +117,7 @@ def delete_table():
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
 
-@app.route("/suggestions")
+@app.route("/suggestions/")
 def suggestion ():
 	if 'loggedIn' in session:
 		return render_template('suggestion.html',title="Suggestion")
