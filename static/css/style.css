@@ -100,12 +100,7 @@ border:0;
 
 
 }
-.submit {
-background-color:red;
 
-
-
-}
 
 .buttons{
     background-color:#469c46;
@@ -185,9 +180,9 @@ background-color:red;
 
 background-color: #98CB5A;
 font-size:30px;
-  border-radius:12px;
-  margin-top:2%;
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius:12px;
+margin-top:2%;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 
 }
@@ -302,4 +297,15 @@ max-height:100 ;
 
   margin-top:2%;
   margin-left:1%;
+}
+.logout1 {
+background-color: #98CB5A;
+font-size:30px;
+border-radius:12px;
+margin-top:2%;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+
+  
 }
