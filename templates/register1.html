@@ -1,16 +1,17 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-<title>Login We Code </title>
+<title>Register We Code </title>
 </head>
 <body>
 <img id="logo" src="{{ url_for('static', filename='images/we_code.png') }}"> 
+	<h1 >Register here </h1>
 {% if error %}
 	<p>{{error}}</p>
 {% endif %}		
 <!-- <h1 class="headers">Register</h1> -->
+
 <form class="login" action="/newAccount" method="POST">
-	<h1>Register here </h1>
 	<b>UserName:</b> <br>
 	<input type="text" name="userName" required><br>
 	<b>Password:</b><br>
