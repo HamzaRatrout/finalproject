@@ -18,7 +18,7 @@ def login_page():
 	else:
 		return render_template('login.html',title="Login")
 @app.route ("/home/")
-# def load_home_page ():
+def load_home_page ():
 	if 'loggedIn' in session :
 		return render_template("home.html",title="Home")
 	else :
