@@ -31,7 +31,6 @@ def load_home_page ():
 @app.route("/students")
 @app.route("/students/")
 def page_students():
-	print session['loggedIn']
 	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template('students.html',title="Students")
 	else :
@@ -144,7 +143,6 @@ def delete_table1():
 
 @app.route('/ins')
 def instructors():
-	print session['loggedIn']
 	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template('instructors.html',title="Instructors")   
 	else :
