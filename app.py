@@ -116,12 +116,19 @@ def delete_table1():
 		return render_template('message.html')
 
 @app.route('/ins')
-def wtvr():
+def instructors():
    return render_template('instructors.html',title="Instructors")
 @app.route('/wait')
 def wtv2r():
    return render_template('sorry.html')
 
+
+@app.route("/logout")
+def logout ():
+	if 'loggedIn' in session and  session['loggedIn']==False:
+		return render_template("login.html",title="Logout")
+	else :
+		return render_template('Home.html')
 if __name__ == "__main__":
     app.run(port=3000)
 
