@@ -5,7 +5,7 @@ app = Flask(__name__)
 # db_url=os.environ['DATABASE_URL']
 db_url="postgres://wpkfjzkaxiispe:cd075d5678edfd916b08a0e2d0bf7a264e94ef30eac671eb91ff1399383b0c2b@ec2-54-204-23-228.compute-1.amazonaws.com:5432/d30vhtaaeu1lnr"
 db = dataset.connect(db_url)
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = '116854708856192900635227298909528209627'
 
 
 show_data=False
