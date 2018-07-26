@@ -18,7 +18,7 @@ def login_page():
 	else:
 		return render_template('login.html',title="Login")
 @app.route ("/home/")
-def load_home_page ():
+# def load_home_page ():
 	if 'loggedIn' in session :
 		return render_template("home.html",title="Home")
 	else :
@@ -81,7 +81,7 @@ def login_page1():
     password=request.form['password']
     user = accounts.find_one(userName=username,password=password)
     global show_data
-    if username=="1":
+    if username=="MohammadBarbarawi"or"Hamza":
     	show_data = True
     else:
     	show_data =False 
