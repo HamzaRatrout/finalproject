@@ -14,12 +14,12 @@ show_data=False
 @app.route('/')
 def login_page():
 	if 'loggedIn' in session and  session['loggedIn']==True:
-    	return render_template('home.html',title="Login")
+		return render_template('home.html',title="Login")
     else :
-    	return render_template('login.html',title="Login")
+		return render_template('login.html',title="Login")
 @app.route ("/home")
 def load_home_page ():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session and  session['loggedIn']==True :
 		return render_template("home.html",title="Home")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
