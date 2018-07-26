@@ -88,7 +88,7 @@ def login_page1():
     if user:
         session['loggedIn']=True
         session.modified = True
-        return render_template("home.html")
+        return render_template("home.html",title="Home")
     else:
         return render_template("login.html",error="The password or username is incorrect")
 
