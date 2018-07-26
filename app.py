@@ -156,7 +156,7 @@ def wtv2r():
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
 
-@app.route("/logout")
+@app.route("/logout",methods=['POST', 'GET'])
 def logout ():
 	session['loggedIn']=False
 	return render_template("login.html",title="Logout")
