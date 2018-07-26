@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import dataset, random, os
 
 app = Flask(__name__)
-db_url=os.environ['DATABASE_URL']
-# db_url="postgres://wpkfjzkaxiispe:cd075d5678edfd916b08a0e2d0bf7a264e94ef30eac671eb91ff1399383b0c2b@ec2-54-204-23-228.compute-1.amazonaws.com:5432/d30vhtaaeu1lnr"
+# db_url=os.environ['DATABASE_URL']
+db_url="postgres://wpkfjzkaxiispe:cd075d5678edfd916b08a0e2d0bf7a264e94ef30eac671eb91ff1399383b0c2b@ec2-54-204-23-228.compute-1.amazonaws.com:5432/d30vhtaaeu1lnr"
 db = dataset.connect(db_url)
 app.secret_key = os.urandom(24)
 
@@ -14,9 +14,6 @@ show_data=False
 @app.route('/')
 def login_page():
     return render_template('login.html',title="Login")
-@app.route('/home')
-def homepage():
-	return render_template('home.html',title="Home")
 @app.route ("/home")
 def load_home_page ():
 	if 'loggedIn' in session and  session['loggedIn']==True:
@@ -143,6 +140,7 @@ def delete_table1():
 
 @app.route('/ins')
 def instructors():
+	print session['loggedIn']
 	if 'loggedIn' in session and  session['loggedIn']==True:
 		return render_template('instructors.html',title="Instructors")   
 	else :
