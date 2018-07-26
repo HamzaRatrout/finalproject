@@ -173,8 +173,12 @@ background-color:red;
  margin:auto;
 }
 .submit {
-background-color: green;
+
+background-color: #98CB5A;
 font-size:30px;
+  border-radius:12px;
+
+
 }
 
 
