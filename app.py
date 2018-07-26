@@ -13,13 +13,13 @@ show_data=False
 
 @app.route('/')
 def login_page():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('home.html',title="Login")
 	else:
 		return render_template('login.html',title="Login")
 @app.route ("/home")
 def load_home_page ():
-	if 'loggedIn' in session and  session['loggedIn']==True :
+	if 'loggedIn' in session :
 		return render_template("home.html",title="Home")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -31,7 +31,7 @@ def load_home_page ():
 @app.route("/students")
 @app.route("/students/")
 def page_students():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('students.html',title="Students")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -40,7 +40,7 @@ def page_students():
 @app.route("/map")
 @app.route("/map/")
 def page2():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('map.html',title="Map")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -51,7 +51,7 @@ def template_test():
 	message = request.form['message']
 	table= db['message']
 	table.insert(dict(yourname=yourname ,message=message ))
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('message.html', messages= list (table.all()),show_data=show_data,title="Thanks")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -59,7 +59,7 @@ def template_test():
 
 @app.route("/data")
 def data():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		if show_data==True :
 			return render_template('data.html', accounts=db["accounts"] ,show_data=show_data,title="Data")
 		else:
@@ -70,7 +70,7 @@ def data():
 
 @app.route('/y2b')
 def page3():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('y2b.html',title="Y2B")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -109,7 +109,7 @@ def register():
 # TODO: route to /error
 @app.route("/delete")
 def delete_table():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		if show_data== True :
 			table= db['accounts']
 			table.delete()
@@ -119,7 +119,7 @@ def delete_table():
 
 @app.route("/suggestions")
 def suggestion ():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('suggestion.html',title="Suggestion")
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
@@ -132,7 +132,7 @@ def suggestion ():
 
 @app.route("/delete1")
 def delete_table1():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		if show_data== True :
 			table= db['message']
 			table.delete()
@@ -143,21 +143,21 @@ def delete_table1():
 
 @app.route('/ins')
 def instructors():
-	print 'loggedIn' in session and  session['loggedIn']==True
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	# print 'loggedIn' in session
+	if 'loggedIn' in session:
 		return render_template('instructors.html',title="Instructors")   
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
 @app.route('/wait')
 def wtv2r():
-	if 'loggedIn' in session and  session['loggedIn']==True:
+	if 'loggedIn' in session:
 		return render_template('sorry.html')
 	else :
 		return render_template('login.html',error="You must be logged in to see the webpage")
 
 @app.route("/logout",methods=['POST', 'GET'])
 def logout ():
-	session['loggedIn']=False
+	session.pop('loggedIn', None)
 	return render_template("login.html",title="Logout")
 if __name__ == "__main__":
     app.run(port=3000)
